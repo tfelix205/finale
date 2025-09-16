@@ -1,6 +1,21 @@
 const userModel = require('../model/userModel.js');
 const bcrypt = require('bcrypt');
 
+
+
+exports.landing = async (req, res) => {
+    try {
+        res.status(200).json({
+            message: `WELCOME TO BACKEND`
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: `internal server error`,
+            error: error.message
+        })
+    }
+}
+
 exports.register = async (req, res) => {
     try {
         const {fullName, email, password, age, phoneNumber} = req.body;
@@ -57,6 +72,27 @@ exports.getOne = async (req,res)=>{
         res.status(500).json({
             message:"internal server error",
             error:error.message
+        })
+    }
+};
+
+exports.getAll = async (req, res) => {
+    try {
+        const users = await userModel.find();
+        if (users.length < 1) {
+            return res.status(200).json({
+                message: `No Users Found !`,
+                users
+            })
+        }
+        res.status(200).json({
+            message: `All Users`,
+            users
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: `internal server error`,
+            error: error.message
         })
     }
 }
