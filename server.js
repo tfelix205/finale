@@ -8,7 +8,7 @@ PORT = process.env.PORT || 6060;
 const DB = process.env.DB
 
 app.use(express.json());
-console.log(DB);
+
 
 app.use('/api/v1', router);
 
