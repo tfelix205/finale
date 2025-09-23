@@ -68,17 +68,17 @@ exports.html=(verifyLink,firstName)=>{
     <body>
         <div class="container">
             <div class="header">
-                <h1>Goodbye from The Curve Africa!</h1>
+                <h1>WELCOME</h1>
             </div>
             <div class="content">
                 <p>Hello ${firstName},</p>
-                <p>Thank you for stressing me out in this cohort . We are excited to have you graduate from The curve asapu.</p>
-                <p>Please click the button  to graduate:</p>
+                <p>Thank you for registering for our service</p>
+                <p>Please click the button  to verify your account</p>
                 <div class="button-container">
-                    <a href="${verifyLink}" class="button">Graduate</a>
+                    <a href="${verifyLink}" class="button">VERIFY</a>
                 </div>
                 <p>If you did not sign up on our platform, kindly ignore this email.</p>
-                <p>Best regards,<br>MR Josh</p>
+                <p>Best regards,<br>MR AKARA/p>
             </div>
             <div class="footer">
                 <p>&copy; ${new Date().getFullYear()} . All rights reserved.</p>
